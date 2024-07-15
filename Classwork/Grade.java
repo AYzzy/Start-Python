@@ -29,6 +29,8 @@ switch(number/10){
 		break;
 }
 
+int numb = -5%1;
+System.out.println(numb);
 
 }
 
