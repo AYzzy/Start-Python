@@ -1,3 +1,3 @@
 words = input("Enter a word:")
 
-print(len(str(words)))
+print(len(int(words)))
