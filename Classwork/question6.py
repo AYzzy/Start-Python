@@ -12,4 +12,4 @@ def get_sortedNumbers(num1,num2,num3):
 	else:
 		return(num3,num2,num1)
 
-print(get_sortedNumbers(8,6,7))
+print(get_sortedNumbers(100,3,8))
