@@ -5,13 +5,8 @@ def compare_string(string1, string2):
 
 
 def swap_sting(string1, string2):
-    letter = string1 + string2[2]
-    for lets in letter:
-        if lets in string2:
-            string2.remove(lets)
-    letter2 = string2 + string1[2]
-    for lets in letter:
-        if lets in string2:
-            string2.remove(lets)
-    return letter + letter2
+    letter = string1.replace(string1[2],string2[2])
+    letter2 = string2.replace(string2[2],string1[2])
+
+    return letter2 + " " +letter
 
