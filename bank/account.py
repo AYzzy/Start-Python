@@ -2,18 +2,18 @@ import random
 
 
 class Account:
-    def __init__(self, name, phone):
+    def __init__(self, name, phone="00000000000"):
         self._name = name
-        self.phone = phone
+        self.__phone = phone
         self.__balance = 0.00
         self.account_number = self.__generate_account_number()
 
     @property
-    def phone(self):
+    def __phone(self):
         return self._phone
 
-    @phone.setter
-    def phone(self, phone_number):
+    @__phone.setter
+    def __phone(self, phone_number):
         if len(phone_number) != 11:
             raise ValueError("Invalid phone number")
         self._phone = phone_number
@@ -24,12 +24,14 @@ class Account:
     def __str__(self):
         return f"""
         Name: {self._name}
-        Phone: {self.phone}
+        Phone: {self.__phone}
         Balance: {self.__balance}
         Account Number: {self.account_number}"""
 
 
 a1 = Account(name="John", phone="08034734618")
-a1.phone = "08034734618"
+
+
+
 
 print(a1)
